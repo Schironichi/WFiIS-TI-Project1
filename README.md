@@ -6,7 +6,7 @@ The project is based on Walter Fendt's [Ohm's Law App](https://www.walter-fendt.
 
 The presentation of the application is available [here](https://ti-proj01-dr.mybluemix.net/static/index.html) \[ 09.02.2022 \].
 
-The *manifest.yml* allows to build this project on IBM Cloud. The only requirement is adding the application name and calling
+The [manifest.yml](manifest.yml) file allows to build this project on IBM Cloud. The only requirement is adding the application name and calling
 
     ibmcloud app push
 
