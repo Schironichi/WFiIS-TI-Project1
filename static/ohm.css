@@ -1,0 +1,46 @@
+@import url(main.css);
+
+fieldset
+{
+    text-align: center;
+    font-size: larger;
+    color: #c3073f;
+    text-shadow: 1px 1px 1px #950740 ;
+}
+
+div#app
+{
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    width: 900px;
+    height: 600px;
+}
+
+div#panel
+{
+    display: inline-grid;
+    background-color: #6f2232;
+    width: 300px;  
+    height: 600px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div#panel select, button
+{
+    background-color: #950740;
+    display: block;
+    width: 100%;
+}
+
+.R
+{
+    background-color: green;
+}
+
+.U
+{
+    background-color: cyan;
+}

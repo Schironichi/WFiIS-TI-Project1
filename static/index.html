@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<!-- Opis funkcji Javascript znajduje się wewnątrz pliku ohm.js -->
+<!-- Program przetestowany na przeglądarkach:
+- Mozilla Firefox: 95.0.2
+- Chromium: 99.0.4814.0
+- Opera: 82.0.4227.43 -->
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Projekt 1</title>
+        <link rel="stylesheet" href="ohm.css">
+        <script src="ohm.js"></script>
+    </head>
+    <body onload="inicjalizuj();">
+        <header>
+            <h1>Techniki Internetowe 2021/2022</h1>
+        </header>
+        <div class="kontener">
+            <article class="wpis">
+                <h2>Prawo Ohma</h2>
+                <p>"Natężenie prądu płynącego przez przewodnik jest wprost proporcjonalne do napięcia przyłożonego między jego końcami". Dla prądu stałego</p>
+                <fieldset>
+                    U = I * R
+                </fieldset>
+                <p>gdzie U - napięcie, I - natężenie, R - rezystancja/opór elektryczny.</p>
+                <p>Program składa się z obwodu zawierającego rezystor, woltomierz (równolegle do rezystora) oraz amperomierz (szeregowo do rezystora) oraz źródło napięcia. Rezystor posiada rezystancję R a źródło napięcie U. Bieżące wartości są przedstawione w symulatorze.</p>
+                <p>W ramach symulatora można modyfikować wyżej przedstawione wartości w określonym przedziale oraz zmieniać zakresy amperomierza i woltomierza. Rezystancja jest w przedziale &lt;0, 100000&gt; a napięcie &lt;-10099, 10099&gt;.</p>
+                <p>Zmiana wartości napięcia jest zależna od wybranego przedziału woltomierza (o 0.1 wybranej wartości). Zmiana rezystancji jest zmianą w skali logarytmicznej. Woltomierz oraz amperomierz wypiszą na swoich ekranach "ERROR" jeżeli wyjdziemy poza skalę danego miernika. Ponad to, wartość wyświetlana na miernikach jest ograniczona do 6 znaków po kropce.</p>
+            </article>
+            <div id="app">
+                <div id="canvas"><canvas id="cv" width=600 height=600>Brak obsługi canvas!</canvas></div>
+                <div id="panel">
+                    <div>Zakres amperomierza</div>
+                    <div><select id="wyborI" onchange="aktualizuj();">
+                        <option value="1000">1 kA</option>
+                        <option value="500">500 A</option>
+                        <option value="100">100 A</option>
+                        <option value="50">50 A</option>
+                        <option value="10">10 A</option>
+                        <option value="5">5 A</option>
+                        <option value="1" selected>1 A</option>
+                        <option value="0.5">500 mA</option>
+                        <option value="0.1">100 mA</option>
+                        <option value="0.05">50 mA</option>
+                        <option value="0.01">10 mA</option>
+                        <option value="0.005">5 mA</option>
+                        <option value="0.001">1 mA</option>
+                    </select></div>
+                    <div>Zakres woltomierza</div>
+                    <div><select id="wyborU" onchange="aktualizuj();">
+                        <option value="1000">1 kV</option>
+                        <option value="500">500 V</option>
+                        <option value="100">100 V</option>
+                        <option value="50">50 V</option>
+                        <option value="10" selected>10 V</option>
+                        <option value="5">5 V</option>
+                        <option value="1">1 V</option>
+                        <option value="0.5">500 mV</option>
+                        <option value="0.1">100 mV</option>
+                        <option value="0.05">50 mV</option>
+                        <option value="0.01">10 mV</option>
+                        <option value="0.005">5 mV</option>
+                        <option value="0.001">1 mV</option>
+                    </select></div>
+                    <div><button class="R" id="wiecejR" onclick="plusR();">Większa wartość R</button></div>
+                    <div><button class="R" id="mniejR" onclick="minusR();">Mniejsza wartość R</button></div>
+                    <div><span style="color: green;" id="wartoscR"></span></div>
+                    <div><button class="U" id="wiecejU" onclick="plusU();">Większa wartość U</button></div>
+                    <div><button class="U" id="mniejU" onclick="minusU();">Mniejsza wartość U</button></div>
+                    <div><span style="color: cyan;" id="wartoscU"></span></div>
+                </div>
+            </div>
+            <article class="wpis">
+                <p>Szczegółowy opis wykorzystanych funkcji Javascript znajduje się wewnątrz pliku ohm.js.</p>
+                <h2>Dodatkowe Informacje</h2>
+                <p>Poniżej znajduje się film ze strony YouTube, na którym użytkownik <a href="https://www.youtube.com/channel/UC1Zk4DuG3H3mnJih9jNWMsQ">Pikademia</a> przedstawia więcej informacji odnośnie Prawa Ohma.</p>
+            </article>
+            <iframe width="1189" height="669" src="https://www.youtube.com/embed/mJAqIw6DGgs" title="YouTube - Prawo Ohma"></iframe>
+        </div>
+        <footer>
+            <p>2021-2022 Damian Raczyński</p>
+        </footer>
+    </body>
+</html>
