@@ -11,3 +11,9 @@ The *manifest.yml* allows to build this project on IBM Cloud. The only requireme
     ibmcloud app push
 
 command in the system console.
+
+Here is a short showcase of the main application:
+
+![Screenshot 1](/showcase/screenshot1.jpg)
+
+![Screenshot 2](/showcase/screenshot2.jpg)
