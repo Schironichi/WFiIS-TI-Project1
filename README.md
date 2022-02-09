@@ -1,10 +1,10 @@
 # WFiIS-TI-Project1
 
-Ohm's Law web simulation using HTML5 with CSS styles + JavaScript 
+Ohm's Law web simulation using HTML5 with CSS styles + JavaScript.
 
-The project is based on Walter Fendt's [Ohm's Law App](https://www.walter-fendt.de/html5/phen/ohmslaw_en.htm). All relevant files have a short commentary in Polish above each of the elements. All functions and names of variables in Polish were required by the course coordinator.
+All relevant files have a short commentary in Polish above each of the elements. All functions and names of variables in Polish were required by the course coordinator.
 
-The presentation of the application is available [here](https://ti-proj01-dr.mybluemix.net/static/index.html) \[ 09.02.2022 \].
+## Note
 
 The [manifest.yml](manifest.yml) file allows to build this project on IBM Cloud. The only requirement is adding the application name and calling
 
@@ -12,7 +12,16 @@ The [manifest.yml](manifest.yml) file allows to build this project on IBM Cloud.
 
 command in the system console.
 
-Here is a short showcase of the main application (also available [here](showcase)):
+## Genesis
+
+The project is based on Walter Fendt's [Ohm's Law App](https://www.walter-fendt.de/html5/phen/ohmslaw_en.htm).
+The project was created for the subject Internet Techniques (Techniki Internetowe) during the V semester of studies.
+
+## Showcase
+
+The presentation of the application is available [here](https://ti-proj01-dr.mybluemix.net/static/index.html) \[ 09.02.2022 \].
+
+Images are also available [here](showcase):
 
 ![Screenshot 1](/showcase/screenshot1.jpg)
 
